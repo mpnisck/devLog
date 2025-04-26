@@ -1,4 +1,6 @@
-export default function Header() {
+import { FC } from "react";
+
+const Header: FC = () => {
   return (
     <>
       <header className="flex gap-[10px] justify-between p-[10px] bg-[#346872] text-[#fff]">
@@ -29,7 +31,9 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <div className="block h-3px bg-[#10373E]"></div>
+      <div className="block h-[3px] bg-[#10373E]"></div>
     </>
   );
-}
+};
+
+export default Header;

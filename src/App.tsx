@@ -1,12 +1,14 @@
-import Header from "@/components/header";
-import Home from "@/components/home";
-import React from "react";
+import Header from "@/components/Header";
+import MainLayout from "@/components/MainLayout";
+import React, { FC } from "react";
 
-export default function App() {
+const App: FC = () => {
   return (
     <>
       <Header />
-      <Home />
+      <MainLayout />
     </>
   );
-}
+};
+
+export default App;

@@ -19,8 +19,9 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  width: 1920px;
+  font-family: "GongGothicLight";
+  line-height: 1.4;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -145,6 +146,20 @@ button:focus-visible {
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
+
+#main {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sec {
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
 /* e : common */
 /* s : header */
 header {
@@ -157,10 +172,12 @@ header {
   border-bottom: 5px solid rgb(18, 55, 63);
   z-index: 99;
 }
+
 header .inner {
   display: flex;
   justify-content: space-between;
 }
+
 header .top_txt {
   width: 1200px;
   height: 100%;
@@ -168,15 +185,18 @@ header .top_txt {
   justify-content: space-between;
   align-items: center;
 }
+
 header .top_txt span {
   font-size: 20px;
   color: #fff;
   letter-spacing: 5px;
 }
+
 header nav {
   width: auto;
   height: 100%;
 }
+
 header nav ul {
   width: auto;
   height: 100%;
@@ -184,21 +204,219 @@ header nav ul {
   justify-content: flex-end;
   align-items: center;
 }
+
 header nav ul li {
   margin-left: 50px;
 }
+
 header nav ul li a {
   text-align: center;
   transition: all 0.3s;
   color: #fff;
 }
+
 header nav ul li a:hover {
   letter-spacing: 5px;
   font-style: italic;
 }
+
 header > nav > ul > li > a.on {
   letter-spacing: 5px;
   font-style: italic;
   color: #c5f0fa;
 }
 /* e : header */
+/* s: section1 */
+#main .sec1 {
+  height: 100vh;
+  position: relative;
+  border-bottom: 2px dashed #eee;
+}
+
+#main .sec1::after {
+  content: "";
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 2px dashed #eee;
+}
+
+#main .sec1 .inner {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+#main .sec1 .content {
+  width: 100%;
+  height: 100%;
+}
+
+#main .sec1 .content > ul {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.4fr;
+}
+
+#main .sec1 .content > ul > li {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+#main .sec1 .txt {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+#main .sec1 .content ul li:nth-child(1) .txt1::before {
+  content: "WEB PRIORITY";
+  position: absolute;
+  right: 80px;
+  top: 20px;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+#main .sec1 .code {
+  content: "";
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 32%;
+  top: 230px;
+  transform: translateX(-32%);
+  background: url("../assets/main_kakao.jpg") center center/cover no-repeat;
+}
+
+#main .sec1 .txt h2 {
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+#main .sec1 .txt1 span {
+  font-size: 15px;
+  color: #888;
+  margin: 0 20px;
+}
+
+#main .sec1 .txt1 .wrap ul {
+  display: flex;
+  gap: 0 40px;
+}
+
+#main .sec1 .txt1 .wrap ul li {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  border: 2px solid #111;
+  width: 400px;
+  height: 60px;
+  border-radius: 100px;
+}
+
+#main .sec1 .txt1 .wrap ul li h2 {
+  font-size: 20px;
+}
+
+#main .sec1 .txt1 p {
+  font-size: 16px;
+  padding: 25px 0;
+  letter-spacing: 2px;
+}
+
+#main .sec1 .txt2 h2 {
+  height: 60px;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+#main .sec1 .txt2 h2 b {
+  font-size: 37px;
+  font-weight: 200;
+  color: #396a75;
+}
+
+#main .sec1 .txt2 p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+#main .sec1 .txt2 p b {
+  color: #333;
+}
+
+#main .sec1 .content > ul > li:nth-child(2) {
+  padding: 0 20px;
+}
+
+#main .sec1 .content > ul > li:nth-child(2) .txt1 {
+  padding-bottom: 80px;
+}
+
+#main .sec1 .content ul li:nth-child(2) .txt1 .wrap {
+  margin-top: 30px;
+}
+
+#main .sec1 .content ul li:nth-child(2) .txt1 .wrap ul li {
+  width: 230px;
+  font-size: 16px;
+  position: relative;
+}
+
+#main .sec1 .content ul li:nth-child(2) .txt1 .wrap ul li:nth-child(1)::after {
+  content: "WINDOW";
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  color: #888;
+  position: absolute;
+  left: 100px;
+  bottom: -60px;
+}
+
+#main .sec1 .content ul li:nth-child(2) a {
+  font-size: 18px;
+  transition: all 0.5s;
+  position: inherit;
+  z-index: 99;
+  color: #888;
+  position: relative;
+}
+
+#main .sec1 .content ul li:nth-child(2) a::before {
+  content: "";
+  width: 0;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  background: #396a7571;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#main .sec1 .content ul li:nth-child(2) a b {
+  font-size: 30px;
+  display: block;
+  color: #111;
+}
+
+#main .sec1 .content ul li:nth-child(2) a:hover {
+  color: #396a75;
+}
+
+#main .sec1 .content ul li:nth-child(2) a:hover::before {
+  width: 75%;
+  left: 0;
+  opacity: 1;
+}
+/* e: section1 */
