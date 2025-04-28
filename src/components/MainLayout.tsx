@@ -1,3 +1,4 @@
+import Career from "@/components/Career";
 import IntroSection from "@/components/IntroSection";
 import { FC } from "react";
 
@@ -8,6 +9,7 @@ const MainLayout: FC = () => {
       className="w-full"
     >
       <IntroSection />
+      <Career />
     </div>
   );
 };
