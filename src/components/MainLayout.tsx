@@ -1,5 +1,6 @@
 import Career from "@/components/Career";
 import IntroSection from "@/components/IntroSection";
+import Work from "@/components/Work";
 import { FC } from "react";
 
 const MainLayout: FC = () => {
@@ -10,6 +11,7 @@ const MainLayout: FC = () => {
     >
       <IntroSection />
       <Career />
+      <Work />
     </div>
   );
 };
